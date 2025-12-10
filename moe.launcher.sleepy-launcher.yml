@@ -3,7 +3,7 @@ command: moe.launcher.sleepy-launcher
 rename-desktop-file: sleepy-launcher.desktop
 
 runtime: org.gnome.Platform
-runtime-version: "49"
+runtime-version: '49'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -31,8 +31,8 @@ cleanup:
   - /share/man
   - /share/pkgconfig
   - /share/vala
-  - "*.la"
-  - "*.a"
+  - '*.la'
+  - '*.a'
 
 modules:
   - name: gamemode
@@ -90,8 +90,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/ImageMagick/ImageMagick
-        tag: 7.1.1-47
-        commit: 82572afc879b439cbf8c9c6f3a9ac7626adf98fb
+        tag: 7.1.2-10
+        commit: f4ce623e9d6d230f80d664543892347bd46c1e98
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+-[\d]+)$
@@ -107,7 +107,8 @@ modules:
       - install -Dm775 target/release/sleepy-launcher /app/bin/sleepy-launcher
       - install -Dm755 moe.launcher.sleepy-launcher.sh /app/bin/moe.launcher.sleepy-launcher
       - install -Dm644 assets/images/icon.png /app/share/icons/hicolor/512x512/apps/moe.launcher.sleepy-launcher.png
-      - desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=moe.launcher.sleepy-launcher --set-key=Icon --set-value=moe.launcher.sleepy-launcher assets/sleepy-launcher.desktop
+      - desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=moe.launcher.sleepy-launcher
+        --set-key=Icon --set-value=moe.launcher.sleepy-launcher assets/sleepy-launcher.desktop
       - install -Dm644 moe.launcher.sleepy-launcher.metainfo.xml /app/share/metainfo/moe.launcher.sleepy-launcher.metainfo.xml
       - mkdir -p /app/utils/
     sources:
