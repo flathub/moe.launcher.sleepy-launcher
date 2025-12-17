@@ -80,22 +80,6 @@ modules:
         url: https://github.com/p7zip-project/p7zip
         tag: v17.05
 
-  # Required for layered backgrounds support
-  - name: ImageMagick
-    config-opts:
-      - --disable-static
-      - --disable-docs
-      - --with-hdri
-      - --with-pic
-    sources:
-      - type: git
-        url: https://github.com/ImageMagick/ImageMagick
-        tag: 7.1.2-11
-        commit: 578d60d1bf77be54b16ef2673d507932885570dd
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+-[\d]+)$
-
   - name: sleepy
     buildsystem: simple
     build-options:
