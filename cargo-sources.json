@@ -8,8 +8,8 @@
     {
         "type": "git",
         "url": "https://github.com/an-anime-team/anime-launcher-sdk",
-        "commit": "87c42064d8422a39b92efbd9035cbd38fffe8f91",
-        "dest": "flatpak-cargo/git/anime-launcher-sdk-87c4206"
+        "commit": "f75593be9df416dd76ac6c5ce28140ed0feaef4d",
+        "dest": "flatpak-cargo/git/anime-launcher-sdk-f75593b"
     },
     {
         "type": "archive",
@@ -110,12 +110,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/anime-launcher-sdk-87c4206/.\" \"cargo/vendor/anime-launcher-sdk\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/anime-launcher-sdk-f75593b/.\" \"cargo/vendor/anime-launcher-sdk\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"anime-launcher-sdk\"\nversion = \"1.32.0\"\nauthors = [\"Nikita Podvirnyi <krypt0nn@vk.com>\"]\nlicense = \"GPL-3.0\"\nreadme = \"README.md\"\nrepository = \"https://github.com/an-anime-team/anime-launcher-sdk\"\nedition = \"2021\"\n\n[dependencies]\ntracing = \"0.1\"\n\n[dependencies.anime-game-core]\ngit = \"https://github.com/an-anime-team/anime-game-core\"\ntag = \"1.36.3\"\nfeatures = [\"all\"]\n\n[dependencies.anyhow]\nversion = \"1.0\"\nfeatures = [\"backtrace\"]\n\n[dependencies.serde]\nversion = \"1.0\"\nfeatures = [\"derive\"]\noptional = true\n\n[dependencies.serde_json]\nversion = \"1.0\"\noptional = true\n\n[dependencies.cached]\nversion = \"0.55\"\nfeatures = [\"proc_macro\"]\n\n[dependencies.enum-ordinalize]\nversion = \"4.3\"\noptional = true\n\n[dependencies.wincompatlib]\nversion = \"0.7.7\"\nfeatures = [\"dxvk\"]\noptional = true\n\n[dependencies.lazy_static]\nversion = \"1.5.0\"\noptional = true\n\n[dependencies.md-5]\nversion = \"0.10\"\nfeatures = [\"asm\"]\noptional = true\n\n[features]\ngenshin = [\"anime-game-core/genshin\"]\nstar-rail = [\"anime-game-core/star-rail\"]\nzzz = [\"anime-game-core/zzz\"]\nhonkai = [\"anime-game-core/honkai\"]\nstar-rail-patch = [\"anime-game-core/patch-jadeite\"]\nhonkai-patch = [\"anime-game-core/patch-jadeite\"]\nstates = []\nconfig = [\"dep:serde\", \"dep:serde_json\", \"dep:enum-ordinalize\"]\ncomponents = [\"dep:wincompatlib\", \"dep:lazy_static\"]\ngame = [\"components\", \"config\"]\nsandbox = []\nsessions = []\nenvironment-emulation = []\nfps-unlocker = [\"dep:md-5\"]\nall = [\"states\", \"config\", \"components\", \"game\", \"sandbox\", \"sessions\", \"environment-emulation\", \"fps-unlocker\"]\ndefault = [\"all\"]\n",
+        "contents": "[package]\nname = \"anime-launcher-sdk\"\nversion = \"1.33.0\"\nauthors = [\"Nikita Podvirnyi <krypt0nn@vk.com>\"]\nlicense = \"GPL-3.0\"\nreadme = \"README.md\"\nrepository = \"https://github.com/an-anime-team/anime-launcher-sdk\"\nedition = \"2021\"\n\n[dependencies]\ntracing = \"0.1\"\n\n[dependencies.anime-game-core]\ngit = \"https://github.com/an-anime-team/anime-game-core\"\ntag = \"1.36.3\"\nfeatures = [\"all\"]\n\n[dependencies.anyhow]\nversion = \"1.0\"\nfeatures = [\"backtrace\"]\n\n[dependencies.serde]\nversion = \"1.0\"\nfeatures = [\"derive\"]\noptional = true\n\n[dependencies.serde_json]\nversion = \"1.0\"\noptional = true\n\n[dependencies.cached]\nversion = \"0.55\"\nfeatures = [\"proc_macro\"]\n\n[dependencies.enum-ordinalize]\nversion = \"4.3\"\noptional = true\n\n[dependencies.wincompatlib]\nversion = \"0.7.7\"\nfeatures = [\"dxvk\"]\noptional = true\n\n[dependencies.lazy_static]\nversion = \"1.5.0\"\noptional = true\n\n[dependencies.md-5]\nversion = \"0.10\"\nfeatures = [\"asm\"]\noptional = true\n\n[features]\ngenshin = [\"anime-game-core/genshin\"]\nstar-rail = [\"anime-game-core/star-rail\"]\nzzz = [\"anime-game-core/zzz\"]\nhonkai = [\"anime-game-core/honkai\"]\nstar-rail-patch = [\"anime-game-core/patch-jadeite\"]\nhonkai-patch = [\"anime-game-core/patch-jadeite\"]\nstates = []\nconfig = [\"dep:serde\", \"dep:serde_json\", \"dep:enum-ordinalize\"]\ncomponents = [\"dep:wincompatlib\", \"dep:lazy_static\"]\ngame = [\"components\", \"config\"]\nsandbox = []\nsessions = []\nenvironment-emulation = []\nfps-unlocker = [\"dep:md-5\"]\nall = [\"states\", \"config\", \"components\", \"game\", \"sandbox\", \"sessions\", \"environment-emulation\", \"fps-unlocker\"]\ndefault = [\"all\"]\n",
         "dest": "cargo/vendor/anime-launcher-sdk",
         "dest-filename": "Cargo.toml"
     },
@@ -5288,7 +5288,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/an-anime-team/anime-game-core\"]\ngit = \"https://github.com/an-anime-team/anime-game-core\"\nreplace-with = \"vendored-sources\"\ntag = \"1.36.3\"\n\n[source.\"https://github.com/an-anime-team/anime-launcher-sdk\"]\ngit = \"https://github.com/an-anime-team/anime-launcher-sdk\"\nreplace-with = \"vendored-sources\"\ntag = \"1.32.0\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/an-anime-team/anime-game-core\"]\ngit = \"https://github.com/an-anime-team/anime-game-core\"\nreplace-with = \"vendored-sources\"\ntag = \"1.36.3\"\n\n[source.\"https://github.com/an-anime-team/anime-launcher-sdk\"]\ngit = \"https://github.com/an-anime-team/anime-launcher-sdk\"\nreplace-with = \"vendored-sources\"\ntag = \"1.33.0\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
