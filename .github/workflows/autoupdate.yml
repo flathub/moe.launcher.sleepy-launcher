@@ -40,7 +40,7 @@ jobs:
       - name: Install dependencies
         run: |
           set -e
-          sudo snap install yq --channel=v3/stable
+          sudo snap install yq
           sudo apt update
           sudo apt install python3-tomlkit python3-aiohttp -y
 
