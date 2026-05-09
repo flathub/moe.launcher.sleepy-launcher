@@ -2,10 +2,11 @@ name: Update Launcher
 
 on:
   workflow_dispatch:
-    tag:
-      description: 'Tag'
-      required: true
-      type: string
+    inputs:
+      tag:
+        description: 'Tag'
+        required: true
+        type: string
 
 env:
   GIT_AUTHOR_NAME: github-actions[bot]
