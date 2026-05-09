@@ -43,10 +43,8 @@ jobs:
           
       - name: Update YML
         uses: mikefarah/yq@master
-        env:
-          tag: ${{ inputs.tag }}
-        run: |
-          yq -i '.modules[3].sources[0].tag = env(tag)' moe.launcher.sleepy-launcher.yml
+        with:
+          cmd: yq -i '.modules[3].sources[0].tag = "${{ inputs.tag }}"' moe.launcher.sleepy-launcher.yml
 
       - name: Commit changes
         run: |
