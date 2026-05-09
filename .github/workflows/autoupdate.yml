@@ -58,4 +58,5 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           branch: ${{ inputs.tag }}
+          title: Update to ${{ inputs.tag }} 
 
