@@ -77,14 +77,13 @@ modules:
       - install -Dm775 target/release/sleepy-launcher /app/bin/sleepy-launcher
       - install -Dm755 moe.launcher.sleepy-launcher.sh /app/bin/moe.launcher.sleepy-launcher
       - install -Dm644 assets/images/icon.png /app/share/icons/hicolor/512x512/apps/moe.launcher.sleepy-launcher.png
-      - desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=moe.launcher.sleepy-launcher
-        --set-key=Icon --set-value=moe.launcher.sleepy-launcher assets/sleepy-launcher.desktop
+      - desktop-file-install --dir=/app/share/applications --set-key=Exec --set-value=moe.launcher.sleepy-launcher --set-key=Icon --set-value=moe.launcher.sleepy-launcher assets/sleepy-launcher.desktop
       - install -Dm644 assets/moe.launcher.sleepy-launcher.metainfo.xml /app/share/metainfo/moe.launcher.sleepy-launcher.metainfo.xml
       - mkdir -p /app/utils/
     sources:
       - type: git
         url: https://github.com/an-anime-team/sleepy-launcher
-        tag: 1.6.6
+        tag: 1.7.0
       - type: file
         path: moe.launcher.sleepy-launcher.sh
       - cargo-sources.json
