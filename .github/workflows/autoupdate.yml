@@ -52,7 +52,7 @@ jobs:
         env:
           tag: ${{ inputs.tag }}
         run: |
-          yq -i '.modules[3].sources[0].tag = env(tag)' moe.launcher.sleepy-launcher.yml
+          yq -i '(.modules[] | select(.name == "sleepy") | .sources[0].tag) = env(tag)' moe.launcher.sleepy-launcher.yml
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v8
