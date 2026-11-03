@@ -103,7 +103,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/an-anime-team/sleepy-launcher
-        tag: 1.9.1
+        tag: 1.9.2
       - type: file
         path: moe.launcher.sleepy-launcher.sh
       - cargo-sources.json
