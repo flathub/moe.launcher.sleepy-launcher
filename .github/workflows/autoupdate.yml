@@ -19,12 +19,16 @@ env:
 jobs:
   update-launcher:
     runs-on: ubuntu-latest
+    container: fedora:latest
 
     strategy:
       matrix:
         branch: [ master ]
 
     steps:
+      - name: Install dependencies
+        run: dnf install -y git yq python3-tomlkit python3-aiohttp
+
       - uses: actions/checkout@v4
         with:
           ref: ${{ matrix.branch }}
@@ -36,13 +40,6 @@ jobs:
       - name: Get sleepy launcher repo
         run: |
           git clone https://github.com/an-anime-team/sleepy-launcher ../sleepy
-
-      - name: Install dependencies
-        run: |
-          set -e
-          sudo snap install yq
-          sudo apt update
-          sudo apt install python3-tomlkit python3-aiohttp -y
 
       - name: Generate Cargo sources
         run: |
