@@ -38,8 +38,10 @@ jobs:
           git clone -b master https://github.com/flatpak/flatpak-builder-tools ../builder-tools
 
       - name: Get sleepy launcher repo
+        env:
+          tag: ${{ inputs.tag }}
         run: |
-          git clone https://github.com/an-anime-team/sleepy-launcher ../sleepy
+          git clone --depth 1 -b "$tag" https://github.com/an-anime-team/sleepy-launcher ../sleepy
 
       - name: Generate Cargo sources
         run: |
