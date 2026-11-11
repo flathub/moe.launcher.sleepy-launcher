@@ -2,7 +2,7 @@ app-id: moe.launcher.sleepy-launcher
 command: moe.launcher.sleepy-launcher
 rename-desktop-file: sleepy-launcher.desktop
 runtime: org.gnome.Platform
-runtime-version: '50'
+runtime-version: '51'
 sdk: org.gnome.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
